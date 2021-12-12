@@ -770,7 +770,7 @@ bar if you want the piece to stay put.</para>
   </listitem>
   </varlistentry>
   <varlistentry>
-  <term><emphasis remap='B'>KeyIn</emphasis></term>
+  <term><emphasis remap='B'>K</emphasis></term>
   <listitem>
 <para>Wake up the piece.  If the piece is a transport or carrier,
 pieces on board will not be awoken.</para>
@@ -903,7 +903,7 @@ that you want produced.</para>
   </listitem>
   </varlistentry>
   <varlistentry>
-  <term><emphasis remap='B'>KeyIn</emphasis></term>
+  <term><emphasis remap='B'>K</emphasis></term>
   <listitem>
 <para>Wake all pieces at the current location.  If the location is a city,
 the fighter path will also be canceled.</para>
