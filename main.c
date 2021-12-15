@@ -17,7 +17,7 @@ options:
 	       be a nonnegative integer.  Default is 5.
 	       
     -d delay:  number of milliseconds to delay between output.
-               default is 2000 (2 seconds).
+               default is 500 (0.5 seconds).
 
     -S saveinterval: sets turn interval between saves.
 	       default is 10
@@ -45,7 +45,7 @@ char *argv[];
 	
     wflg = 70; /* set defaults */
     sflg = 5;
-    dflg = 2000;
+    dflg = 500;
     Sflg = 10;
     game.savefile = "empsave.dat";
 
