@@ -1,0 +1,69 @@
+Quickstart Guide to sts-empire 23Dec2021
+
+Background: sts-empire is a fork of the game vms-empire, a text based wargame playable using a terminal. The game simulates war between two commanders across continents and involving armies, fighter aircraft, submarines and various ships. Games can take several hours to complete. The program is can be run on just about any computer, is free software (GPLv3) and is being used as a sample program to teach software testing and development.
+
+Overview: This guide assumes the game will be played on a Linux machine with a terminal least 80 characters wide by 24 characters high, that the player has already installed the game and just started it for the first time. It will guide the user through the game two times, first as a "mini-game" level where the players goal is to move armies to another island and take over a city, the second time the players goal is to beat the computer normally.  
+
+Guide: "Commander, I have bad news. War has just been declared. Our people trust you can lead us to victory. The city stands ready to produce whatever is needed."
+
+After starting the game, you are asked to set a difficulty level. What you enter here determines which continents of the randomly generated map are selected to allocate a starting city to you and the enemy. Choose the easiest option the first few times, difficulty cannot be changed mid-game.  The computer has randomly generated world 100 wide by 60 high and you cannot travel off the edge of it. 
+
+Your first action is to choose what you want your city to build. Armies are the only units which can capture cities, press 'A' to choose this (Although commands are shown here as uppercase, lowcase can also be used in the game).
+
+Now the game puts us into Command mode. This allows us to do things like save the game, turn on or off the movie recording option, print out a full scale map as a Text file, print sectors of the map (this may not be necessary if you're using a GUI with a terminal big enough). Press 'H' to see a list of commands available for Command mode. Next  type 'M' to enter user mode, but with no units yet, we have to press 'M' several times until the city produces an Army. Each time we make a move the AI moves for the computer.
+
+When cities produce new units for the first time, it takes 20% longer, so the first Army will appear on Round 6 and then we will be asked to give it a command. Before doing that, press 'H' to see a list of commands available for User mode.
+
+The game uses QWE A D ZXC as movement commands similar to a numeric keypad for 8 different directions of North West, North, North East, West, East, South West, South and South East respectively. Once you command the army to move, it'll show up on the map as an 'A' enemy units are shown on the map as lowercase letters. Your cities are shown as "O", enemy cities "X" and neutral cities as "*".
+
+After all moves for each round is done, the game returns to command mode. Before you get the army to explore the rest of the island, press 'A' in Command mode to start auto-move. When this is set, the game assumes you'll be continuing in User mode at the end of each round. It auto saves every few rounds, but pressing 'O' to stop Auto-moving and return to command mode at the end of the round enables a manual save game to be made if you have to leave the game at short notice. Games are manually saved by pressing 'S' in command mode. They are automatically restored when starting the game again from the previous directory it was started from.
+
+Once you get your army next to a city that isn't yours, moving on to it will command the unit to attempt to take it over. Armies have a 50% chance of being successful with an attack and if they aren't successful, they're destroyed.
+
+If you have multiple units and don't want to issue specific commands for each unit each time, you can issue commands like the 'S' for Sentry,'R' for Random, 'G' for Go Explore, where units aim to explore accessible but unrevealed section of the map and 'Y' for attack where the unit will move to a city you don't control. Units can also be told to move in specific directions with a two keystroke command of 'I' and then the direction key [QWEADZXC].  Units can also be commanded to go to specific grid squares, but we'll come back to that later. The game will let you issue fatal orders to your units such as moving armies over the ocean, attacking your own units or cities, flying aircraft over cities that arent yours and moving ships onto land. You will get prompted to enter 'Y' or 'N' to confirm this. 
+
+If a unit is doing something like attacking/ sentrying / exploring and you want to wake it up, you have to press 'J' to enter edit mode. Pressing 'H' in edit mode, shows the edit mode help. Pressing 'O' returns to User mode. While in edit mode, the cursor can move across the map and above units and press 'K' to wake it for it to prompt for orders the next time it is the units turn to take orders. Units also wake themselves up when they are unable to do their programmed action. For example an army told to move East will prompt the user for orders if continuing east will mean moving into the ocean. Units also wake if there is nothing left to explore or attack on their continent. 
+
+While in edit mode, putting the cursor over a unit or city and pressing '?' will show information about it such as what type of unit its building and when it'll complete, hitpoints and if the unit is acting on previously issued orders (func). Units can be ordered to move to specific locations in edit mode. Pressing 'M' on the unit and then moving the cursor to the location and then pressing 'N' will set the order. It may be easy to remember by 'M'ove to this locatio'N' . 
+
+If your playing with a screen smaller than the size of the world, the program will show the world in sectors. Using 'P' and then entering a sector # will show that particular sector on the screen. Sector 0 is the top left sector 1 is below it and so on until sector 4 in the bottom left. Sector 5 is top right and below it sector 6 and so on unti sector 9 is bottom right. If you are in edit mode, pressing J shows city production and may redraw the screen if the cursor is in another sector. This can be useful for issuing move orders to far away locations.
+
+1 - controlling the starting island
+
+The general steps to controlling your starting continent is to build armies and capture the cities. When a city is captured, the attacking army is broken up and dispersed among the city and you are asked what unit type you want the city to build. 
+
+If the city is by the ocean, a troop transport is recommended for rapid expansion, they take 30 rounds to build (36 for first one) and can move two squares per round. During a round you may only want to move a troop transport one square, press space to "sit". Troop transports can be vunerable as they are sunk after only a single successful attack on it.
+
+Another good option is to build fighters to explore as they can move 8 squares a round.  Fighters only have 32 units of fuel and will crash if they run out. This means they can move 16 squares out and 16 squares back and land safely. Fighters also have a special command of 'L' for Landing, where they will attempt to move to land automatically, but the player may be prompted to move them if several units get in the way and it cant find the way itself. Fighters can attack any other unit, but not cities, if a player attempts to attack a city the fighter is always shot down. Fighters are useful in reconnisance and its advantageous to know exactly there the troop transports full of armies should land to quickly take over another continent. Later in the game they also come in handy as protection in case the enemy has units nearby. 
+
+You could get a city to also produce Armies, but if you delay building troop transports too long, you could be stuck with many armies on an island. 
+
+Once you start amassing armies to go to another continent, the Transport commandhh is useful ('T') where an army will wait for a transport to be next to it and it will automatically wake up and board the transport. If several armies are made, you should move armies to where the transport will be made so they can board a shortly after its made. 
+
+Once you have landed troops on another continent and taken over a city on your first playthrough, i recommend restarting the game in case you made some mistakes while the computer has been playing its A-game. This also allows you to turn on movie recording 'T' in command mode that can be watched after the enemy has been defeated. There is also a setting when the program is started to adjust the delay when showing the player messages. starting the program with -d 1000 will delay a second to show messages while -d 250 waits only a quarter of a second.
+
+
+2 - exploring and taking over nearby islands
+
+After you started landing on another continent, its more likely you'll encounter an enemy unit. Combat between units is a little different. There is still a 50/50 chance to decide which unit is successful in scoring a hit on the other, but some units have more than one hitpoint (Destroyers(3), Carriers(8), Submarines(2), Battleships(10)) . If after an attack, a unit hasnt been destroyed, combat continues until a unit is destroyed. Some units also deal more than a unit damage if their attack is successful (Submarines(3), Battleship (2))
+
+Damaged units may have movement restrictions and damaged carriers can only carry as many fighters as they have hitpoints, excess fighters are destroyed during battle. Units need to return to cities to get back to full health. using the Upgrade ('U') command is like the landing command for fighters. While units are in port being repaired, they will not defend a city if it comes under attack and are captured by the enemy if the city is captured. 
+
+Units can also attack to land they cant travel on, so you can order armies to attack ships. If they are successful, they will unfortunately stay on water and drown after sinking the ship. 
+
+
+3 - Defeating the enemy and Advanced commands
+
+There are a few ways to end the game. The computer will admit defeat when you have 3 times as many cities and 3 times as many armies as it, or it has 0 cities and 0 armies. This enables any movie data recorded while playing to be watched with 'W' in command mode and you to examine the enemy maps with 'E' in a manner similar to printing sectors to show their units and cities.  If you have 0 cities and 0 armies, the computer wins.
+
+Fighters are useful to sweep the waterways to detect units. Troop transports should be considered priority targets. Fighters should also be used to attack enemy armies instead of your armies as they cannot takeover cities. 
+
+Cities can be ordered to change production in edit mode using 'B' while the cursor is over the city. Whatever was partially contructed is discarded and a 20% build time penalty will apply to the first unit it builds.
+
+Cities can also be given orders to pass on to units in a multi step process. In edit mode, put the cursor over the city, press 'V' to issue the command, press the unit type character and then issue the command. EG: 'VAID' will command armies produced by the city to move east after they are build. This may be useful to get them to move to a troop transport muster point. 'VAR' will command armies to move randomly after they are built. 'VPG' will command patrol boats to go explore after they are build. 
+
+The game can also be made harder.In command mode, you can press 'G' to give the computer moves as well as 'C' to give a city to the computer and 'N' to give N moves to the computer. 
+
+Notes: Fighters may also lose a unit of fuel after a successful attack
+
+Further information is contained in the programs manual page. from the Linux CLI, type 'man sts-empire'.
